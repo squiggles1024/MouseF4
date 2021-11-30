@@ -26,7 +26,7 @@ void wait_for_tick_start(void);
 
 int main(void)
 {
-  SCB->VTOR = FLASH_BASE;
+  SCB->VTOR = FLASH_BASE; //Fix CubeIDE Code Generation bug: Does not place vector table base address in correct location.
   HAL_Init();
   SystemClock_Config();
   MX_GPIO_Init();
@@ -39,7 +39,6 @@ int main(void)
 
   mouse_init();
   mouse.read_settings();
-  //mouse.write_settings(test_settings);
   wait_for_tick_start();
   uint32_t poll_timer = HAL_GetTick();
   while (1)
