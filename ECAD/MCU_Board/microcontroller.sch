@@ -1,0 +1,215 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A3 16535 11693
+encoding utf-8
+Sheet 2 4
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Device:Crystal Y?
+U 1 1 618C29F2
+P 2350 2850
+F 0 "Y?" H 2350 3118 50  0000 C CNN
+F 1 "Crystal" H 2350 3027 50  0000 C CNN
+F 2 "" H 2350 2850 50  0001 C CNN
+F 3 "~" H 2350 2850 50  0001 C CNN
+	1    2350 2850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 618C3B60
+P 1950 3175
+F 0 "C?" H 2065 3221 50  0000 L CNN
+F 1 "4.3pF" H 2065 3130 50  0000 L CNN
+F 2 "" H 1988 3025 50  0001 C CNN
+F 3 "~" H 1950 3175 50  0001 C CNN
+	1    1950 3175
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 618C4566
+P 2700 3175
+F 0 "C?" H 2815 3221 50  0000 L CNN
+F 1 "4.3pF" H 2815 3130 50  0000 L CNN
+F 2 "" H 2738 3025 50  0001 C CNN
+F 3 "~" H 2700 3175 50  0001 C CNN
+	1    2700 3175
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 618C4E6D
+P 2350 3450
+F 0 "#PWR?" H 2350 3200 50  0001 C CNN
+F 1 "GND" H 2355 3277 50  0000 C CNN
+F 2 "" H 2350 3450 50  0001 C CNN
+F 3 "" H 2350 3450 50  0001 C CNN
+	1    2350 3450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1950 3325 1950 3425
+Wire Wire Line
+	1950 3425 2350 3425
+Wire Wire Line
+	2350 3425 2350 3450
+Wire Wire Line
+	2350 3425 2700 3425
+Wire Wire Line
+	2700 3425 2700 3325
+Connection ~ 2350 3425
+Wire Wire Line
+	1950 2850 2200 2850
+Wire Wire Line
+	1950 2850 1950 3025
+Wire Wire Line
+	2500 2850 2700 2850
+Wire Wire Line
+	2700 2850 2700 3025
+Wire Wire Line
+	2700 2850 2700 2550
+Connection ~ 2700 2850
+Connection ~ 1950 2850
+$Comp
+L Switch:SW_SPDT SW?
+U 1 1 618C95B7
+P 2450 4250
+F 0 "SW?" H 2450 4535 50  0000 C CNN
+F 1 "SW_SPDT" H 2450 4444 50  0000 C CNN
+F 2 "" H 2450 4250 50  0001 C CNN
+F 3 "~" H 2450 4250 50  0001 C CNN
+	1    2450 4250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 618CA498
+P 1950 4250
+F 0 "R?" V 1850 4250 50  0000 C CNN
+F 1 "10k" V 2050 4250 50  0000 C CNN
+F 2 "" V 1880 4250 50  0001 C CNN
+F 3 "~" H 1950 4250 50  0001 C CNN
+	1    1950 4250
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2100 4250 2250 4250
+Text GLabel 1800 4250 0    50   Input ~ 0
+BOOT
+$Comp
+L MCU_ST_STM32L4:STM32L476QEIx U?
+U 1 1 618EF71F
+P 7725 5125
+F 0 "U?" H 6775 8575 50  0000 C CNN
+F 1 "STM32L476QEIx" H 7025 1675 50  0000 C CNN
+F 2 "Package_BGA:UFBGA-132_7x7mm_Layout12x12_P0.5mm" H 6725 1725 50  0001 R CNN
+F 3 "http://www.st.com/st-web-ui/static/active/en/resource/technical/document/datasheet/DM00108832.pdf" H 7725 5125 50  0001 C CNN
+	1    7725 5125
+	1    0    0    -1  
+$EndComp
+Text GLabel 6525 3725 0    50   Input ~ 0
+HSE_IN
+Text GLabel 6525 3825 0    50   Input ~ 0
+HSE_OUT
+Text GLabel 2775 2250 2    50   Input ~ 0
+HSE_IN
+Text GLabel 2775 2350 2    50   Input ~ 0
+HSE_OUT
+Wire Wire Line
+	1950 2250 2775 2250
+Wire Wire Line
+	1950 2250 1950 2850
+Wire Wire Line
+	2700 2525 2700 2350
+Wire Wire Line
+	2700 2350 2775 2350
+$Comp
+L power:+3.3V #PWR?
+U 1 1 617DF3A0
+P 2850 4050
+F 0 "#PWR?" H 2850 3900 50  0001 C CNN
+F 1 "+3.3V" H 2865 4223 50  0000 C CNN
+F 2 "" H 2850 4050 50  0001 C CNN
+F 3 "" H 2850 4050 50  0001 C CNN
+	1    2850 4050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2650 4150 2850 4150
+Wire Wire Line
+	2850 4150 2850 4050
+Text GLabel 6525 2025 0    50   Input ~ 0
+BOOT
+$Comp
+L power:GND #PWR?
+U 1 1 617E0D7F
+P 2825 4400
+F 0 "#PWR?" H 2825 4150 50  0001 C CNN
+F 1 "GND" H 2830 4227 50  0000 C CNN
+F 2 "" H 2825 4400 50  0001 C CNN
+F 3 "" H 2825 4400 50  0001 C CNN
+	1    2825 4400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2650 4350 2825 4350
+Wire Wire Line
+	2825 4350 2825 4400
+$Comp
+L power:GND #PWR?
+U 1 1 617E3011
+P 7525 8875
+F 0 "#PWR?" H 7525 8625 50  0001 C CNN
+F 1 "GND" H 7530 8702 50  0000 C CNN
+F 2 "" H 7525 8875 50  0001 C CNN
+F 3 "" H 7525 8875 50  0001 C CNN
+	1    7525 8875
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7525 8725 7525 8800
+Wire Wire Line
+	7525 8800 7625 8800
+Wire Wire Line
+	8125 8800 8125 8725
+Connection ~ 7525 8800
+Wire Wire Line
+	7525 8800 7525 8875
+Wire Wire Line
+	8025 8725 8025 8800
+Connection ~ 8025 8800
+Wire Wire Line
+	8025 8800 8125 8800
+Wire Wire Line
+	7925 8725 7925 8800
+Connection ~ 7925 8800
+Wire Wire Line
+	7925 8800 8025 8800
+Wire Wire Line
+	7825 8725 7825 8800
+Connection ~ 7825 8800
+Wire Wire Line
+	7825 8800 7925 8800
+Wire Wire Line
+	7725 8725 7725 8800
+Connection ~ 7725 8800
+Wire Wire Line
+	7725 8800 7825 8800
+Wire Wire Line
+	7625 8725 7625 8800
+Connection ~ 7625 8800
+Wire Wire Line
+	7625 8800 7725 8800
+Text GLabel 6525 1825 0    50   Input ~ 0
+NRST
+$EndSCHEMATC

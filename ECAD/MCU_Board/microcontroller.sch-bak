@@ -1,0 +1,124 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 2 4
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+Text Notes 2125 1100 0    50   ~ 0
+Microcontroller
+$Comp
+L Device:Crystal Y?
+U 1 1 618C29F2
+P 2350 2850
+F 0 "Y?" H 2350 3118 50  0000 C CNN
+F 1 "Crystal" H 2350 3027 50  0000 C CNN
+F 2 "" H 2350 2850 50  0001 C CNN
+F 3 "~" H 2350 2850 50  0001 C CNN
+	1    2350 2850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 618C3B60
+P 1950 3175
+F 0 "C?" H 2065 3221 50  0000 L CNN
+F 1 "4.3pF" H 2065 3130 50  0000 L CNN
+F 2 "" H 1988 3025 50  0001 C CNN
+F 3 "~" H 1950 3175 50  0001 C CNN
+	1    1950 3175
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 618C4566
+P 2700 3175
+F 0 "C?" H 2815 3221 50  0000 L CNN
+F 1 "4.3pF" H 2815 3130 50  0000 L CNN
+F 2 "" H 2738 3025 50  0001 C CNN
+F 3 "~" H 2700 3175 50  0001 C CNN
+	1    2700 3175
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 618C4E6D
+P 2350 3450
+F 0 "#PWR?" H 2350 3200 50  0001 C CNN
+F 1 "GND" H 2355 3277 50  0000 C CNN
+F 2 "" H 2350 3450 50  0001 C CNN
+F 3 "" H 2350 3450 50  0001 C CNN
+	1    2350 3450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1950 3325 1950 3425
+Wire Wire Line
+	1950 3425 2350 3425
+Wire Wire Line
+	2350 3425 2350 3450
+Wire Wire Line
+	2350 3425 2700 3425
+Wire Wire Line
+	2700 3425 2700 3325
+Connection ~ 2350 3425
+Wire Wire Line
+	1950 2850 2200 2850
+Wire Wire Line
+	1950 2850 1950 3025
+Wire Wire Line
+	2500 2850 2700 2850
+Wire Wire Line
+	2700 2850 2700 3025
+Wire Wire Line
+	2700 2850 2700 2550
+Connection ~ 2700 2850
+Wire Wire Line
+	1950 2850 1950 2550
+Connection ~ 1950 2850
+$Comp
+L Switch:SW_SPDT SW?
+U 1 1 618C95B7
+P 2350 4150
+F 0 "SW?" H 2350 4435 50  0000 C CNN
+F 1 "SW_SPDT" H 2350 4344 50  0000 C CNN
+F 2 "" H 2350 4150 50  0001 C CNN
+F 3 "~" H 2350 4150 50  0001 C CNN
+	1    2350 4150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 618CA498
+P 1850 4150
+F 0 "R?" V 1750 4150 50  0000 C CNN
+F 1 "10k" V 1950 4150 50  0000 C CNN
+F 2 "" V 1780 4150 50  0001 C CNN
+F 3 "~" H 1850 4150 50  0001 C CNN
+	1    1850 4150
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2000 4150 2150 4150
+Text GLabel 1700 4150 0    50   Input ~ 0
+BOOT
+$Comp
+L MCU_ST_STM32L4:STM32L476QEIx U?
+U 1 1 618EF71F
+P 5225 4125
+F 0 "U?" H 5175 436 50  0000 C CNN
+F 1 "STM32L476QEIx" H 5175 345 50  0000 C CNN
+F 2 "Package_BGA:UFBGA-132_7x7mm_Layout12x12_P0.5mm" H 4225 725 50  0001 R CNN
+F 3 "http://www.st.com/st-web-ui/static/active/en/resource/technical/document/datasheet/DM00108832.pdf" H 5225 4125 50  0001 C CNN
+	1    5225 4125
+	1    0    0    -1  
+$EndComp
+$EndSCHEMATC
