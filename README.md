@@ -13,4 +13,4 @@ The 3D printed housing (also my design) was glued to the base plate with E6000. 
 ![Assembly](images/mouse_photo02.jpg)
 
 The LED can't really be seen in normal operation, though it can serve as a visual cue that new settings were successfully programmed when changing the keybinds using the python script.
-[LED](images/mouse_photo04.jpg)
+![LED](images/mouse_photo04.jpg)
